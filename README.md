@@ -5,7 +5,7 @@
 Структура проекта
 server.py — серверная часть на Flask для работы с моделью и получения результатов через веб-интерфейс.
 
-my_model.h5 — обученная модель нейронной сети (ResNet-101V2). Весит 180 мб https://disk.yandex.ru/d/cEm3FhYblh6Nxw
+my_model.h5 — обученная модель нейронной сети (ResNet-101V2).  Весит 180 мб https://disk.yandex.ru/d/cEm3FhYblh6Nxw (Тестовые изображение так же находятся в яндекс диске)
 
 predict_pneumonia_and_tb.ipynb — Jupyter notebook с кодом для обучения модели.
 
