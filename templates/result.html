@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/style.css" rel="stylesheet" type="text/css"/>
+    <title>Result</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="menu-container">
+            <a class="menu-link" href="{{ url_for('home')}}">Главная</a>
+            <a class="menu-link" href="{{ url_for('new_page')}}">Анализ снимков</a>
+        </div>
+
+
+    <h1>Предсказанный класс: {{ predicted_class_name }}</h1>
+    <p>Вероятность: {{ predicted_class_probability }}</p>
+    <h2>Вероятность для всех классов:</h2>
+    <h3>
+        {% for class_name, percent in probabilities_percent.items() %}
+            <li>{{ class_name }}: {{   percent }}</li>
+        {% endfor %}
+    </h3>
+
+    <img src="{{ url_for('static', filename='uploads/' + name) }}" alt="Uploaded Image" style="max-width: 400px; max-height: 400px ; margin-left:775px;">
+
+
+    
+    
+    <div class="result-button-container">
+        <form class="result-button1" action="{{ url_for('new_page') }}" method="get">
+            <button type='submit' class="result-button1">Назад</button>
+        </form>
+    </div>
+    
+
+</body>
+</html>

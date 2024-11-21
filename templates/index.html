@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Project</title>
+    <link href="static/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="menu-container">
+        <a class="menu-link" href="{{ url_for('home')}}">Главная</a>
+        <a class="menu-link" href="{{ url_for('new_page')}}">Анализ снимков</a>
+    </div>
+
+    <p class="indented-text">
+        Классификация изображений с глубоким обучением
+        с помощью Flask.<br>
+        Предсказание рентгеновских снимков для обнаружения патологий<br>
+        при туберкулезе и пневмонии
+        с использованием ResNet.
+    </p>
+</div>
+
+<!-- <div class="upload-container">
+    <input type="file" id="imageUpload" accept="image/*">
+    <img src="#" id="uploadedImage" alt="">
+    <p id="imageFileName"></p> 
+</div> -->
+
+<div class="upload-container">
+    <form action="{{ url_for('upload_file')}}" method="POST" enctype="multipart/form-data">
+        
+        <input type="file" name="imageFile" class="upload-class" required><br>
+        
+        
+        <div class="result-button-container">
+            <button type='submit' class="result-button">Показать результат</button>
+        </div>
+    </form>
+</div>
+
+
+
+<!-- Кнопка для отображения результата 
+<div class="result-button-container">
+    <button type='submit' class="result-button">Показать результат</button>
+</div>-->
+
+
+</body>
+</html>

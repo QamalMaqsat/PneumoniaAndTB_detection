@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Project</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="menu-container">
+        <a class="menu-link" href="app.html">Главная</a>
+        <a class="menu-link" href="upload.html">Анализ снимков</a>
+    </div>
+
+    <p class="indented-text">
+        Классификация изображений с глубоким обучением
+        с помощью Flask.<br>
+        Предсказание рентгеновских снимков для обнаружения патологий<br>
+        при туберкулезе и пневмонии
+        с использованием ResNet.
+    </p>
+</div>
+
+<div class="upload-container">
+    <input type="file" id="imageUpload" accept="image/*">
+    <img src="#" id="uploadedImage" alt="">
+    <p id="imageFileName"></p> <!-- Добавленный элемент для отображения сокращенного названия файла -->
+</div>
+
+
+<!-- Кнопка для отображения результата -->
+<div class="result-button-container">
+    <button class="result-button">Показать результат</button>
+</div>
+
+
+</body>
+</html>
