@@ -13,7 +13,7 @@ IMAGE_SIZE = (400, 400)
 UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 app.config.from_object(__name__)
-app.config['SECRET_KEY'] = ''
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Загрузка предварительно обученной модели
