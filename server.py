@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import tensorflow as tf
 
-# Создание экземпляра Flask
+# Создание экземпляра Flaska
 app = Flask(__name__)
 classes = ['NORMAL', 'PNEUMONIA', 'TB']
 
